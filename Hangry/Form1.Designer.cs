@@ -28,12 +28,59 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            label1 = new Label();
+            button1 = new Button();
+            button2 = new Button();
+            SuspendLayout();
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 90F);
+            label1.Location = new Point(-3, -21);
+            label1.Name = "label1";
+            label1.Size = new Size(173, 199);
+            label1.TabIndex = 0;
+            label1.Text = "Я";
+            // 
+            // button1
+            // 
+            button1.Location = new Point(137, 38);
+            button1.Name = "button1";
+            button1.Size = new Size(193, 47);
+            button1.TabIndex = 1;
+            button1.Text = "Адміністратор";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(137, 92);
+            button2.Name = "button2";
+            button2.Size = new Size(193, 47);
+            button2.TabIndex = 2;
+            button2.Text = "Користувач";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(368, 174);
+            Controls.Add(button2);
+            Controls.Add(button1);
+            Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Name = "Form1";
+            Text = "Вибір типу користувача";
+            Load += Form1_Load;
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label label1;
+        private Button button1;
+        private Button button2;
     }
 }
