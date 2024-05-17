@@ -2,6 +2,8 @@ namespace Hangry
 {
     public partial class UserTypeForm : Form
     {
+        AdministratorLoginForm administratorForm;
+
         public UserTypeForm()
         {
             InitializeComponent();
@@ -12,11 +14,11 @@ namespace Hangry
 
         }
 
-        private void administratorButton_Click(object sender, EventArgs e)
-        {
-            var administratorForm = new AdministratorLoginForm();
+        private void administratorButton_Click(object sender, EventArgs e) {
+            if(administratorForm == null || administratorForm.IsDisposed) { 
+                administratorForm = new AdministratorLoginForm();
+            }
             administratorForm.Show();
-            Hide();
         }
     }
 }

@@ -37,6 +37,7 @@
             // 
             passwordTextBox.Location = new Point(12, 36);
             passwordTextBox.Name = "passwordTextBox";
+            passwordTextBox.PasswordChar = '*';
             passwordTextBox.Size = new Size(233, 27);
             passwordTextBox.TabIndex = 1;
             // 
@@ -57,6 +58,7 @@
             logInButton.TabIndex = 4;
             logInButton.Text = "Увійти";
             logInButton.UseVisualStyleBackColor = true;
+            logInButton.Click += logInButton_Click;
             // 
             // AdministratorLoginForm
             // 
