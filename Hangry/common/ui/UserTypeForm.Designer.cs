@@ -61,6 +61,7 @@
             userButton.TabIndex = 2;
             userButton.Text = "Користувач";
             userButton.UseVisualStyleBackColor = true;
+            userButton.Click += userButton_Click;
             // 
             // UserTypeForm
             // 

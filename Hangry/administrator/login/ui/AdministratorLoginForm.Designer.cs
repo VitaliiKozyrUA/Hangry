@@ -40,6 +40,7 @@
             passwordTextBox.PasswordChar = '*';
             passwordTextBox.Size = new Size(233, 27);
             passwordTextBox.TabIndex = 1;
+            passwordTextBox.TextChanged += passwordTextBox_TextChanged;
             // 
             // label2
             // 

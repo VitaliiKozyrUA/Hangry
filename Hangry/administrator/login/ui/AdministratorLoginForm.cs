@@ -1,6 +1,7 @@
 ﻿using Hangry.administrator.login.data;
 using Hangry.administrator.login.data.datasources;
 using Hangry.administrator.main.ui;
+using Hangry.user.login.data.datasources;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,7 +26,7 @@ namespace Hangry
             ICredentialsDataSource credentialsDataSource = new CredentialsLocalDataSource();
             var expectedPassword = credentialsDataSource.GetCredentials().Password;
             var actualPassword = passwordTextBox.Text;
-            if(expectedPassword != actualPassword)
+            if (expectedPassword != actualPassword)
             {
                 MessageBox.Show(
                     "Пароль невірний!", "Помилка входу",
@@ -37,6 +38,11 @@ namespace Hangry
             var mainForm = new EstablishmentsForm();
             mainForm.Show();
             Close();
+        }
+
+        private void passwordTextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
