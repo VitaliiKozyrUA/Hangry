@@ -45,11 +45,11 @@ namespace Hangry.administrator.main.ui
                 return;
             }
             var establishment = new Establishment(
-                new Random().Next(),
+                0,
                 nameTextBox.Text,
                 imagePath,
                 addressTextBox.Text,
-                ImmutableList.Create<Product>()
+                []
             );
             EstablishmentLocalDataSource.Add(establishment);
             Close();

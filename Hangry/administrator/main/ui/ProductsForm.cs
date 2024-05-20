@@ -14,7 +14,7 @@ namespace Hangry.administrator.main.ui
 {
     public partial class ProductsForm : Form
     {
-        private int EstablishmentId { get; set; }
+        private readonly int EstablishmentId;
 
         public ProductsForm(int establishmentId)
         {
