@@ -27,6 +27,11 @@ namespace Hangry.user.main
             return (from e in collection.AsQueryable() where e.UserId == userId select e).ToList();
         }
 
+        public static void Clear()
+        {
+            collection.DeleteMany(e => true);
+        }
+
         public void Dispose()
         {
             store.Dispose();

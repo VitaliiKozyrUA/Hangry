@@ -59,6 +59,11 @@ namespace Hangry.common.data.datasources
             return establishment.Products.ToList();
         }
 
+        public static void Clear()
+        {
+            collection.DeleteMany(e => true);
+        }
+
         public void Dispose()
         {
             store.Dispose();
