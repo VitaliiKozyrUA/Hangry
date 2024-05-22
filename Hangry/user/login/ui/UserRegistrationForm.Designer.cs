@@ -121,7 +121,7 @@
             Controls.Add(label2);
             Controls.Add(usernameTextBox);
             Name = "UserRegistrationForm";
-            Text = "Вхід";
+            Text = "Реєстрація";
             ResumeLayout(false);
             PerformLayout();
         }

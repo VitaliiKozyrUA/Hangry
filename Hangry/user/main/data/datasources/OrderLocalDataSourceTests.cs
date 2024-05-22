@@ -21,6 +21,7 @@ namespace Hangry.user.main.data.datasources
             var order2 = new Order(2, productB, 1, 2, DateTime.Now.ToString());
             var orders = new List<Order> { order1, order2 };
 
+            OrderLocalDataSource.Clear();
             OrderLocalDataSource.AddAll(orders);
 
             var ordersFromDataSource = OrderLocalDataSource.GetWhereUserId(1);
@@ -40,6 +41,7 @@ namespace Hangry.user.main.data.datasources
             var order3 = new Order(3, productC, 3, 1, DateTime.Now.ToString());
 
             var orders = new List<Order> { order1, order2, order3 };
+            OrderLocalDataSource.Clear();
             OrderLocalDataSource.AddAll(orders);
 
             var ordersForUser1 = OrderLocalDataSource.GetWhereUserId(1);
@@ -59,6 +61,7 @@ namespace Hangry.user.main.data.datasources
             var order2 = new Order(2, productB, 1, 2, DateTime.Now.ToString());
 
             var orders = new List<Order> { order1, order2 };
+            OrderLocalDataSource.Clear();
             OrderLocalDataSource.AddAll(orders);
 
             OrderLocalDataSource.Clear();

@@ -1,6 +1,7 @@
 ﻿using Hangry.administrator.login.data.models;
 using Hangry.administrator.main.ui;
 using Hangry.user.login.data.datasources;
+using Hangry.user.login.data.models;
 using Hangry.user.main.ui;
 using System;
 using System.Collections.Generic;
@@ -23,12 +24,11 @@ namespace Hangry.user.login.ui
 
         private void logInButton_Click(object sender, EventArgs e)
         {
-            UserDataSource userDataSource = new UserLocalDataSource();
             var credentials = new data.models.Credentials(
                 usernameTextBox.Text,
                 passwordTextBox.Text
             );
-            var user = userDataSource.Get(credentials);
+            var user = User.LogIn(credentials);
             if(user == null)
             {
                 MessageBox.Show(

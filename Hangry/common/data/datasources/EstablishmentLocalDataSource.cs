@@ -37,7 +37,13 @@ namespace Hangry.common.data.datasources
         {
             var establishment = (from e in GetAll() where e.Id == establishmentId select e).FirstOrDefault();
             if (establishment == null) return;
-            var updated = establishment with { Products = establishment.Products.Add(product) };
+            var updated = new Establishment(
+                establishment.Id,
+                establishment.Name,
+                establishment.ImagePath,
+                establishment.Address,
+                establishment.Products.Add(product)
+            );
             collection.ReplaceOne(establishmentId, updated);
             OnChanged?.Invoke();
         }
@@ -47,7 +53,13 @@ namespace Hangry.common.data.datasources
             var establishment = (from e in GetAll() where e.Id == establishmentId select e).FirstOrDefault();
             if (establishment == null) return;
             var filtered = establishment.Products.Where(product => product.Id != id);
-            var updated = establishment with { Products = filtered.ToImmutableList() };
+            var updated = new Establishment(
+                establishment.Id,
+                establishment.Name,
+                establishment.ImagePath,
+                establishment.Address,
+                filtered.ToImmutableList()
+            );
             collection.ReplaceOne(establishmentId, updated);
             OnChanged?.Invoke();
         }

@@ -29,14 +29,13 @@ namespace Hangry.user.login.ui
                 );
                 return;
             }
-            UserDataSource userDataSource = new UserLocalDataSource();
             var user = new User(
                 new Random().Next(),
                 usernameTextBox.Text,
                 addressTextBox.Text,
                 passwordTextBox.Text
             );
-            userDataSource.Add(user);
+            user.Register();
 
             var userLoginForm = new UserLoginForm();
             userLoginForm.Show();

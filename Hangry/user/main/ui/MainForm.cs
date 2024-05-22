@@ -90,7 +90,7 @@ namespace Hangry.user.main.ui
         private void populateOrdersTable()
         {
             ordersDataGridView.Rows.Clear();
-            var orders = OrderLocalDataSource.GetWhereUserId(User.Id);
+            var orders = User.GetOrders();
             foreach (Order order in orders)
             {
                 ordersDataGridView.Rows.Add(order.date, order.Product.Name, (order.Product.Price * order.Quantity).ToString("0.00"), order.Quantity);
@@ -132,7 +132,7 @@ namespace Hangry.user.main.ui
                 return;
             }
             var orders = productToQuantity.Select(e => new Order(0, e.Key, e.Value, User.Id, DateTime.Now.ToShortDateString()));
-            OrderLocalDataSource.AddAll(orders.ToList());
+            User.SaveOrders(orders.ToList());
             productToQuantity.Clear();
             populateProductsTable();
             MessageBox.Show(

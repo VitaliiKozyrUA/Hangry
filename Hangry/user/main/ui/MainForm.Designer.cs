@@ -30,6 +30,10 @@
         {
             profilePanel = new Panel();
             ordersDataGridView = new DataGridView();
+            dateTextBox = new DataGridViewTextBoxColumn();
+            productNameTextBox = new DataGridViewTextBoxColumn();
+            sumTextBox = new DataGridViewTextBoxColumn();
+            countTextBox = new DataGridViewTextBoxColumn();
             label2 = new Label();
             usernameLabel = new Label();
             label1 = new Label();
@@ -44,10 +48,6 @@
             countTextBoxP = new DataGridViewTextBoxColumn();
             addButton = new DataGridViewButtonColumn();
             minusButton = new DataGridViewButtonColumn();
-            dateTextBox = new DataGridViewTextBoxColumn();
-            productNameTextBox = new DataGridViewTextBoxColumn();
-            sumTextBox = new DataGridViewTextBoxColumn();
-            countTextBox = new DataGridViewTextBoxColumn();
             profilePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ordersDataGridView).BeginInit();
             productsPanel.SuspendLayout();
@@ -74,6 +74,37 @@
             ordersDataGridView.RowHeadersWidth = 51;
             ordersDataGridView.Size = new Size(774, 341);
             ordersDataGridView.TabIndex = 3;
+            // 
+            // dateTextBox
+            // 
+            dateTextBox.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dateTextBox.HeaderText = "Дата";
+            dateTextBox.MinimumWidth = 6;
+            dateTextBox.Name = "dateTextBox";
+            dateTextBox.Width = 70;
+            // 
+            // productNameTextBox
+            // 
+            productNameTextBox.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            productNameTextBox.HeaderText = "Назва продукту";
+            productNameTextBox.MinimumWidth = 6;
+            productNameTextBox.Name = "productNameTextBox";
+            // 
+            // sumTextBox
+            // 
+            sumTextBox.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            sumTextBox.HeaderText = "Сума";
+            sumTextBox.MinimumWidth = 6;
+            sumTextBox.Name = "sumTextBox";
+            sumTextBox.Width = 73;
+            // 
+            // countTextBox
+            // 
+            countTextBox.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
+            countTextBox.HeaderText = "Кількість";
+            countTextBox.MinimumWidth = 6;
+            countTextBox.Name = "countTextBox";
+            countTextBox.Width = 99;
             // 
             // label2
             // 
@@ -207,37 +238,6 @@
             minusButton.UseColumnTextForButtonValue = true;
             minusButton.Width = 87;
             // 
-            // dateTextBox
-            // 
-            dateTextBox.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            dateTextBox.HeaderText = "Дата";
-            dateTextBox.MinimumWidth = 6;
-            dateTextBox.Name = "dateTextBox";
-            dateTextBox.Width = 70;
-            // 
-            // productNameTextBox
-            // 
-            productNameTextBox.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            productNameTextBox.HeaderText = "Назва продукту";
-            productNameTextBox.MinimumWidth = 6;
-            productNameTextBox.Name = "productNameTextBox";
-            // 
-            // sumTextBox
-            // 
-            sumTextBox.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            sumTextBox.HeaderText = "Сума";
-            sumTextBox.MinimumWidth = 6;
-            sumTextBox.Name = "sumTextBox";
-            sumTextBox.Width = 73;
-            // 
-            // countTextBox
-            // 
-            countTextBox.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
-            countTextBox.HeaderText = "Кількість";
-            countTextBox.MinimumWidth = 6;
-            countTextBox.Name = "countTextBox";
-            countTextBox.Width = 99;
-            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -245,8 +245,8 @@
             ClientSize = new Size(796, 449);
             Controls.Add(productsButton);
             Controls.Add(profileButton);
-            Controls.Add(profilePanel);
             Controls.Add(productsPanel);
+            Controls.Add(profilePanel);
             Name = "MainForm";
             Text = "Головна";
             Load += MainForm_Load;
