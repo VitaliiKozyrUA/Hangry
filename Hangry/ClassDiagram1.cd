@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Hangry.user.login.data.models.User">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAQAAQAAAAAAEgAAAAAQAAAABABACAAAAACAAAAA=</HashCode>
+      <FileName>user\models\User.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="userLocalDataSource" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Hangry.common.data.models.Establishment">
+    <Position X="3" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAIQAAAAAAAACAAAAAAAAAAQ=</HashCode>
+      <FileName>common\data\models\Establishment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hangry.common.data.models.Product">
+    <Position X="7.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQAgAAAAAAAAAIQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>common\data\models\Product.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hangry.administrator.login.data.models.Credentials">
+    <Position X="5.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>administrator\login\data\models\Credentials.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hangry.user.login.data.models.Credentials">
+    <Position X="3" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>user\models\Credentials.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hangry.administrator.login.data.datasources.CredentialsLocalDataSource">
+    <Position X="3" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>administrator\login\data\datasources\CredentialsLocalDataSource.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Hangry.common.data.datasources.EstablishmentLocalDataSource">
+    <Position X="5.25" Y="4.5" Width="1.5" />
+    <NestedTypes>
+      <Delegate Name="Hangry.common.data.datasources.EstablishmentLocalDataSource.EstablishmentEventHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>common\data\datasources\EstablishmentLocalDataSource.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>BAIAAAAAASAAAAAAIEAAQAAAAAAAAAABAgAAAARAAAA=</HashCode>
+      <FileName>common\data\datasources\EstablishmentLocalDataSource.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Hangry.user.login.data.datasources.UserDataSource">
+    <Position X="9.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAIAAAAAAAgAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>user\login\data\datasources\UserDataSource.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hangry.user.main.OrderLocalDataSource">
+    <Position X="9.75" Y="7" Width="1.5" />
+    <NestedTypes>
+      <Delegate Name="Hangry.user.main.OrderLocalDataSource.OrderEventHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>user\main\data\datasources\OrderLocalDataSource.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAASQAAAAAAEAAAAAAAAIAAAABAAAAAABAAAA=</HashCode>
+      <FileName>user\main\data\datasources\OrderLocalDataSource.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Hangry.user.login.data.datasources.UserLocalDataSource">
+    <Position X="9.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAgAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>user\login\data\datasources\UserLocalDataSource.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

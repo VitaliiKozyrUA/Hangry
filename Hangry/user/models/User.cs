@@ -48,8 +48,8 @@ namespace Hangry.user.login.data.models
             foreach (var order in orders)
             {
                 if(order.Quantity <= 0) throw new ArgumentException();
-                if (order.UserId == Id) throw new ArgumentException();
-                if (order.date.Length <= 0) throw new ArgumentException();
+                if (order.UserId != Id) throw new ArgumentException();
+                if (order.Date.Length <= 0) throw new ArgumentException();
             }
             OrderLocalDataSource.AddAll(orders);
         }
@@ -59,14 +59,31 @@ namespace Hangry.user.login.data.models
             return OrderLocalDataSource.GetWhereUserId(Id);
         }
 
-        public bool Equals(User? other)
+        public override int GetHashCode()
         {
-            return this == other;
+            unchecked
+            {
+                int hashCode = Id;
+                hashCode = (hashCode * 397) ^ (Name != null ? Name.GetHashCode() : 0);
+                hashCode = (hashCode * 397) ^ (Address != null ? Address.GetHashCode() : 0);
+                return hashCode;
+            }
         }
 
         public string ToString(string? format, IFormatProvider? formatProvider)
         {
             return $"Id: {Id}, Name: {Name}, Address: {Address}";
+        }
+
+        public bool Equals(User? obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+            {
+                return false;
+            }
+
+            User other = (User)obj;
+            return Id == other.Id && Name.Equals(other.Name) && Address.Equals(other.Address);
         }
     }
 }

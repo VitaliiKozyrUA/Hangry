@@ -245,8 +245,8 @@
             ClientSize = new Size(796, 449);
             Controls.Add(productsButton);
             Controls.Add(profileButton);
-            Controls.Add(productsPanel);
             Controls.Add(profilePanel);
+            Controls.Add(productsPanel);
             Name = "MainForm";
             Text = "Головна";
             Load += MainForm_Load;

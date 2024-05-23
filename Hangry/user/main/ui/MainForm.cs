@@ -93,7 +93,7 @@ namespace Hangry.user.main.ui
             var orders = User.GetOrders();
             foreach (Order order in orders)
             {
-                ordersDataGridView.Rows.Add(order.date, order.Product.Name, (order.Product.Price * order.Quantity).ToString("0.00"), order.Quantity);
+                ordersDataGridView.Rows.Add(order.Date, order.Product.Name, (order.Product.Price * order.Quantity).ToString("0.00"), order.Quantity);
             }
         }
 

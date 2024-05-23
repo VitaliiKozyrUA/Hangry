@@ -14,7 +14,7 @@ namespace Hangry.administrator.main.ui
 {
     public partial class ProductCreationForm : Form
     {
-        private string imagePath;
+        private string imagePath = string.Empty;
         private int EstablishmentId { get; set; }
 
         public ProductCreationForm(int establishmentId)

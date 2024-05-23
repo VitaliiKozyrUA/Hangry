@@ -28,6 +28,16 @@ namespace Hangry.user.login.ui
                 usernameTextBox.Text,
                 passwordTextBox.Text
             );
+
+            if (credentials.Password == string.Empty || credentials.Username == string.Empty)
+            {
+                MessageBox.Show(
+                    "Логін або пароль невірний!", "Помилка входу",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error
+                );
+                return;
+            }
+
             var user = User.LogIn(credentials);
             if(user == null)
             {

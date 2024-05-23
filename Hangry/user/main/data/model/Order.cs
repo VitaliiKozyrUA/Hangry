@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Hangry.user.main
 {
-    public record Order
+    public class Order
     {
         public int Id { get; init; }
         public Product Product { get; init; }
@@ -28,6 +28,26 @@ namespace Hangry.user.main
             Quantity = quantity;
             UserId = userId;
             Date = date;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+            {
+                return false;
+            }
+
+            Order otherOrder = (Order)obj;
+            return Id == otherOrder.Id &&
+                   Product == otherOrder.Product &&
+                   Quantity == otherOrder.Quantity &&
+                   UserId == otherOrder.UserId &&
+                   Date == otherOrder.Date;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Id, Product, Quantity, UserId, Date);
         }
     }
 }
